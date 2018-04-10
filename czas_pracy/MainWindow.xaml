@@ -1,0 +1,33 @@
+﻿<Window x:Class="czas_pracy.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:czas_pracy"
+        mc:Ignorable="d"
+        Icon="ikona.png"
+       
+        Title="Dolar$$ 2000" Height="377.824" Width="429.812"
+    >
+
+
+    <Window.Background >
+
+        <ImageBrush   ImageSource="tlo.jpg"/>
+    </Window.Background>
+
+
+    <Grid Margin="10,0,2,0" RenderTransformOrigin="0.513,0.287">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="322*"/>
+            <RowDefinition Height="25*"/>
+            
+        </Grid.RowDefinitions>
+        <Button Content="Dodaj"  Margin="111,48,135,229" Width="164" Click="Dodaj_Click" Style="{StaticResource MyButton}"/>
+        <Button Content="Edytuj pracownika"   Margin="111,98,135,179" Width="164" Click="Edytuj_Click"     Style="{StaticResource MyButton}"/>
+        <Button Content="Wyświetl raport"  Margin="111,148,135,129" Width="164" Click="Wyswietl_Click"   Style="{StaticResource MyButton}"/>
+        <Button Content="Wyjście"  Margin="111,198,135,79" Width="164" Click="Wyjscie_Click"    Style="{StaticResource MyButton}"/>
+
+    </Grid>
+
+</Window>

@@ -1,0 +1,142 @@
+﻿<Window x:Class="czas_pracy.Dodaj"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:czas_pracy"
+        mc:Ignorable="d"
+        Style="{StaticResource MyWindow}"
+        Title="Dodaj" Height="446.862" Width="463.18">
+
+
+
+
+    <Grid>
+        <Button Content="Anuluj" HorizontalAlignment="Left" Margin="48,360,0,0" VerticalAlignment="Top" Width="75" Click="Anuluj_Click" Style="{StaticResource MyButton}"/>
+        <Button Content="Dodaj" HorizontalAlignment="Left" Margin="337,360,0,0" VerticalAlignment="Top" Width="75" Click="Dodaj_Click" Style="{StaticResource MyButton}"/>
+        <TabControl HorizontalAlignment="Left" Height="322" Margin="10,10,0,0" VerticalAlignment="Top" Width="435"  >
+            <TabItem Name="Pracownik" Header="Pracownik" >
+                <Grid>
+                    <TextBox Margin="282,0,10,267"  />
+                    <Label Content="Imie" Margin="0,0,371,267"/>
+                    <TextBox Margin="282,27,10,240"  />
+                    <Label Content="Nazwisko" Margin="0,30,357,239"/>
+                    <TextBox Margin="282,57,10,210"  />
+                    <Label Content="Pesel" Margin="0,58,374,210"/>
+
+                </Grid>
+            </TabItem>
+            <TabItem Header="Zwolnienie" Name="Zwolnienie" Height="22" VerticalAlignment="Top">
+                <Grid>
+                    <TextBox Name="Pesel" Margin="282,0,10,267"  />
+                    <Label Content="Pesel" Margin="10,0,302,267"/>
+                    <ComboBox Name ="dd" Margin="273,30,117,241" IsReadOnly="True" IsEditable="True" Text="dd">
+                        <ComboBoxItem>1</ComboBoxItem>
+                        <ComboBoxItem>2</ComboBoxItem>
+                        <ComboBoxItem>3</ComboBoxItem>
+                        <ComboBoxItem>4</ComboBoxItem>
+                        <ComboBoxItem>5</ComboBoxItem>
+                        <ComboBoxItem>6</ComboBoxItem>
+                        <ComboBoxItem>7</ComboBoxItem>
+                        <ComboBoxItem>8</ComboBoxItem>
+                        <ComboBoxItem>9</ComboBoxItem>
+                        <ComboBoxItem>10</ComboBoxItem>
+                        <ComboBoxItem>11</ComboBoxItem>
+                        <ComboBoxItem>12</ComboBoxItem>
+                        <ComboBoxItem>13</ComboBoxItem>
+                        <ComboBoxItem>14</ComboBoxItem>
+                        <ComboBoxItem>15</ComboBoxItem>
+                        <ComboBoxItem>16</ComboBoxItem>
+                        <ComboBoxItem>17</ComboBoxItem>
+                        <ComboBoxItem>18</ComboBoxItem>
+                        <ComboBoxItem>19</ComboBoxItem>
+                        <ComboBoxItem>20</ComboBoxItem>
+                        <ComboBoxItem>21</ComboBoxItem>
+                        <ComboBoxItem>22</ComboBoxItem>
+                        <ComboBoxItem>23</ComboBoxItem>
+                        <ComboBoxItem>24</ComboBoxItem>
+                        <ComboBoxItem>25</ComboBoxItem>
+                        <ComboBoxItem>26</ComboBoxItem>
+                        <ComboBoxItem>27</ComboBoxItem>
+                        <ComboBoxItem>28</ComboBoxItem>
+                        <ComboBoxItem>29</ComboBoxItem>
+                        <ComboBoxItem>30</ComboBoxItem>
+                        <ComboBoxItem>31</ComboBoxItem>
+                    </ComboBox>
+                    <ComboBox Name ="mm" Margin="317,30,73,241" IsReadOnly="True" IsEditable="True" Text="mm">
+                        <ComboBoxItem>1</ComboBoxItem>
+                        <ComboBoxItem>2</ComboBoxItem>
+                        <ComboBoxItem>3</ComboBoxItem>
+                        <ComboBoxItem>4</ComboBoxItem>
+                        <ComboBoxItem>5</ComboBoxItem>
+                        <ComboBoxItem>6</ComboBoxItem>
+                        <ComboBoxItem>7</ComboBoxItem>
+                        <ComboBoxItem>8</ComboBoxItem>
+                        <ComboBoxItem>9</ComboBoxItem>
+                        <ComboBoxItem>10</ComboBoxItem>
+                        <ComboBoxItem>11</ComboBoxItem>
+                        <ComboBoxItem>12</ComboBoxItem>
+                    </ComboBox>
+                    <ComboBox Name ="rrrr" Margin="361,30,10,241" IsReadOnly="True" IsEditable="True" Text="rrrr" >
+                        <ComboBoxItem>2009</ComboBoxItem>
+                        <ComboBoxItem>2010</ComboBoxItem>
+                        <ComboBoxItem>2011</ComboBoxItem>
+                        <ComboBoxItem>2012</ComboBoxItem>
+                        <ComboBoxItem>2013</ComboBoxItem>
+                        <ComboBoxItem>2014</ComboBoxItem>
+                        <ComboBoxItem>2015</ComboBoxItem>
+                        <ComboBoxItem>2016</ComboBoxItem>
+                        <ComboBoxItem>2017</ComboBoxItem>
+                        <ComboBoxItem>2018</ComboBoxItem>
+                    </ComboBox>
+
+                    <Label Content="Data rozpoczecia" Margin="10,30,302,239"/>
+                    <TextBox  Margin="282,140,10,127"  />
+                    <ComboBox Margin="361,56,10,212">
+                    <ComboBoxItem>1</ComboBoxItem>
+                    <ComboBoxItem>2</ComboBoxItem>
+                    <ComboBoxItem>3</ComboBoxItem>
+                    <ComboBoxItem>4</ComboBoxItem>
+                    <ComboBoxItem>5</ComboBoxItem>
+                    <ComboBoxItem>6</ComboBoxItem>
+                    <ComboBoxItem>7</ComboBoxItem>
+                    <ComboBoxItem>8</ComboBoxItem>
+                    <ComboBoxItem>9</ComboBoxItem>
+                    <ComboBoxItem>10</ComboBoxItem>
+                    <ComboBoxItem>11</ComboBoxItem>
+                    <ComboBoxItem>12</ComboBoxItem>
+                    <ComboBoxItem>13</ComboBoxItem>
+                    <ComboBoxItem>14</ComboBoxItem>
+                    <ComboBoxItem>15</ComboBoxItem>
+                    <ComboBoxItem>16</ComboBoxItem>
+                    <ComboBoxItem>17</ComboBoxItem>
+                    <ComboBoxItem>18</ComboBoxItem>
+                    <ComboBoxItem>19</ComboBoxItem>
+                    <ComboBoxItem>20</ComboBoxItem>
+                    <ComboBoxItem>21</ComboBoxItem>
+                    <ComboBoxItem>22</ComboBoxItem>
+                    <ComboBoxItem>23</ComboBoxItem>
+                    <ComboBoxItem>24</ComboBoxItem>
+                    <ComboBoxItem>25</ComboBoxItem>
+                    <ComboBoxItem>26</ComboBoxItem>
+                    <ComboBoxItem>27</ComboBoxItem>
+                    <ComboBoxItem>28</ComboBoxItem>
+                    <ComboBoxItem>29</ComboBoxItem>
+                    <ComboBoxItem>30</ComboBoxItem>
+                    <ComboBoxItem>31</ComboBoxItem>
+                    </ComboBox>
+                    <Label Content="Czas trwania" Margin="10,56,302,212"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Rozliczenie" Name="Rozliczenie">
+                <Grid Background="#FFE5E5E5" />
+            </TabItem>
+
+
+
+
+
+
+        </TabControl>
+    </Grid>
+</Window>
