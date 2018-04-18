@@ -12,7 +12,6 @@
 
 
     <Window.Background >
-
         <ImageBrush   ImageSource="tlo.jpg"/>
     </Window.Background>
 

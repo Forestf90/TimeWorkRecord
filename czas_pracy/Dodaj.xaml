@@ -17,20 +17,13 @@
         <TabControl HorizontalAlignment="Left" Height="322" Margin="10,10,0,0" VerticalAlignment="Top" Width="435"  >
             <TabItem Name="Pracownik" Header="Pracownik" >
                 <Grid>
-                    <TextBox Margin="282,0,10,267"  />
-                    <Label Content="Imie" Margin="0,0,371,267"/>
-                    <TextBox Margin="282,27,10,240"  />
-                    <Label Content="Nazwisko" Margin="0,30,357,239"/>
-                    <TextBox Margin="282,57,10,210"  />
-                    <Label Content="Pesel" Margin="0,58,374,210"/>
-
-                </Grid>
-            </TabItem>
-            <TabItem Header="Zwolnienie" Name="Zwolnienie" Height="22" VerticalAlignment="Top">
-                <Grid>
-                    <TextBox Name="Pesel" Margin="282,0,10,267"  />
-                    <Label Content="Pesel" Margin="10,0,302,267"/>
-                    <ComboBox Name ="dd" Margin="273,30,117,241" IsReadOnly="True" IsEditable="True" Text="dd">
+                    <TextBox Margin="271,10,10,255"  />
+                    <Label Content="Imie" Margin="10,10,361,255"/>
+                    <TextBox Margin="271,44,10,223"  />
+                    <Label Content="Nazwisko" Margin="10,44,347,223"/>
+                    <TextBox Margin="271,79,10,184"  />
+                    <Label Content="Pesel" Margin="10,81,364,184"/>
+                    <ComboBox Name ="Pzdd" Margin="271,117,119,151" IsReadOnly="True" IsEditable="True" Text="dd">
                         <ComboBoxItem>1</ComboBoxItem>
                         <ComboBoxItem>2</ComboBoxItem>
                         <ComboBoxItem>3</ComboBoxItem>
@@ -63,7 +56,7 @@
                         <ComboBoxItem>30</ComboBoxItem>
                         <ComboBoxItem>31</ComboBoxItem>
                     </ComboBox>
-                    <ComboBox Name ="mm" Margin="317,30,73,241" IsReadOnly="True" IsEditable="True" Text="mm">
+                    <ComboBox Name ="Pzmm" Margin="317,117,73,151" IsReadOnly="True" IsEditable="True" Text="mm">
                         <ComboBoxItem>1</ComboBoxItem>
                         <ComboBoxItem>2</ComboBoxItem>
                         <ComboBoxItem>3</ComboBoxItem>
@@ -77,7 +70,81 @@
                         <ComboBoxItem>11</ComboBoxItem>
                         <ComboBoxItem>12</ComboBoxItem>
                     </ComboBox>
-                    <ComboBox Name ="rrrr" Margin="361,30,10,241" IsReadOnly="True" IsEditable="True" Text="rrrr" >
+                    <ComboBox Name ="Pzrrrr" Margin="361,117,10,151" IsReadOnly="True" IsEditable="True" Text="rrrr" >
+                        <ComboBoxItem>2009</ComboBoxItem>
+                        <ComboBoxItem>2010</ComboBoxItem>
+                        <ComboBoxItem>2011</ComboBoxItem>
+                        <ComboBoxItem>2012</ComboBoxItem>
+                        <ComboBoxItem>2013</ComboBoxItem>
+                        <ComboBoxItem>2014</ComboBoxItem>
+                        <ComboBoxItem>2015</ComboBoxItem>
+                        <ComboBoxItem>2016</ComboBoxItem>
+                        <ComboBoxItem>2017</ComboBoxItem>
+                        <ComboBoxItem>2018</ComboBoxItem>
+                    </ComboBox>
+                    <Label Content="Data zatrudnienia" Margin="10,115,309,151"/>
+
+                    <RadioButton Content="O Prace" HorizontalAlignment="Left" Margin="334,156,0,0" VerticalAlignment="Top" Height="16"/>
+                    <RadioButton Content="Zlecenie" HorizontalAlignment="Left" Margin="334,178,0,0" VerticalAlignment="Top" Height="17"/>
+                    <Label Content="Typ umowy" Margin="10,149,337,116"/>
+                    <TextBox HorizontalAlignment="Left" Height="25" Margin="299,214,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                    <Label Content="Wynagrodzenie" Margin="10,214,309,51"/>
+
+
+                </Grid>
+            </TabItem>
+            <TabItem Header="Zwolnienie" Name="Zwolnienie">
+                <Grid>
+                    <TextBox Name="Pesel" Margin="282,18,10,253"  />
+                    <Label Content="Pesel" Margin="10,10,302,255"/>
+                    <ComboBox Name ="Zdd" Margin="273,46,117,222" IsReadOnly="True" IsEditable="True" Text="dd">
+                        <ComboBoxItem>1</ComboBoxItem>
+                        <ComboBoxItem>2</ComboBoxItem>
+                        <ComboBoxItem>3</ComboBoxItem>
+                        <ComboBoxItem>4</ComboBoxItem>
+                        <ComboBoxItem>5</ComboBoxItem>
+                        <ComboBoxItem>6</ComboBoxItem>
+                        <ComboBoxItem>7</ComboBoxItem>
+                        <ComboBoxItem>8</ComboBoxItem>
+                        <ComboBoxItem>9</ComboBoxItem>
+                        <ComboBoxItem>10</ComboBoxItem>
+                        <ComboBoxItem>11</ComboBoxItem>
+                        <ComboBoxItem>12</ComboBoxItem>
+                        <ComboBoxItem>13</ComboBoxItem>
+                        <ComboBoxItem>14</ComboBoxItem>
+                        <ComboBoxItem>15</ComboBoxItem>
+                        <ComboBoxItem>16</ComboBoxItem>
+                        <ComboBoxItem>17</ComboBoxItem>
+                        <ComboBoxItem>18</ComboBoxItem>
+                        <ComboBoxItem>19</ComboBoxItem>
+                        <ComboBoxItem>20</ComboBoxItem>
+                        <ComboBoxItem>21</ComboBoxItem>
+                        <ComboBoxItem>22</ComboBoxItem>
+                        <ComboBoxItem>23</ComboBoxItem>
+                        <ComboBoxItem>24</ComboBoxItem>
+                        <ComboBoxItem>25</ComboBoxItem>
+                        <ComboBoxItem>26</ComboBoxItem>
+                        <ComboBoxItem>27</ComboBoxItem>
+                        <ComboBoxItem>28</ComboBoxItem>
+                        <ComboBoxItem>29</ComboBoxItem>
+                        <ComboBoxItem>30</ComboBoxItem>
+                        <ComboBoxItem>31</ComboBoxItem>
+                    </ComboBox>
+                    <ComboBox Name ="Zmm" Margin="317,46,73,222" IsReadOnly="True" IsEditable="True" Text="mm">
+                        <ComboBoxItem>1</ComboBoxItem>
+                        <ComboBoxItem>2</ComboBoxItem>
+                        <ComboBoxItem>3</ComboBoxItem>
+                        <ComboBoxItem>4</ComboBoxItem>
+                        <ComboBoxItem>5</ComboBoxItem>
+                        <ComboBoxItem>6</ComboBoxItem>
+                        <ComboBoxItem>7</ComboBoxItem>
+                        <ComboBoxItem>8</ComboBoxItem>
+                        <ComboBoxItem>9</ComboBoxItem>
+                        <ComboBoxItem>10</ComboBoxItem>
+                        <ComboBoxItem>11</ComboBoxItem>
+                        <ComboBoxItem>12</ComboBoxItem>
+                    </ComboBox>
+                    <ComboBox Name ="Zrrrr" Margin="361,46,10,222" IsReadOnly="True" IsEditable="True" Text="rrrr" >
                         <ComboBoxItem>2009</ComboBoxItem>
                         <ComboBoxItem>2010</ComboBoxItem>
                         <ComboBoxItem>2011</ComboBoxItem>
@@ -90,47 +157,113 @@
                         <ComboBoxItem>2018</ComboBoxItem>
                     </ComboBox>
 
-                    <Label Content="Data rozpoczecia" Margin="10,30,302,239"/>
-                    <TextBox  Margin="282,140,10,127"  />
-                    <ComboBox Margin="361,56,10,212">
-                    <ComboBoxItem>1</ComboBoxItem>
-                    <ComboBoxItem>2</ComboBoxItem>
-                    <ComboBoxItem>3</ComboBoxItem>
-                    <ComboBoxItem>4</ComboBoxItem>
-                    <ComboBoxItem>5</ComboBoxItem>
-                    <ComboBoxItem>6</ComboBoxItem>
-                    <ComboBoxItem>7</ComboBoxItem>
-                    <ComboBoxItem>8</ComboBoxItem>
-                    <ComboBoxItem>9</ComboBoxItem>
-                    <ComboBoxItem>10</ComboBoxItem>
-                    <ComboBoxItem>11</ComboBoxItem>
-                    <ComboBoxItem>12</ComboBoxItem>
-                    <ComboBoxItem>13</ComboBoxItem>
-                    <ComboBoxItem>14</ComboBoxItem>
-                    <ComboBoxItem>15</ComboBoxItem>
-                    <ComboBoxItem>16</ComboBoxItem>
-                    <ComboBoxItem>17</ComboBoxItem>
-                    <ComboBoxItem>18</ComboBoxItem>
-                    <ComboBoxItem>19</ComboBoxItem>
-                    <ComboBoxItem>20</ComboBoxItem>
-                    <ComboBoxItem>21</ComboBoxItem>
-                    <ComboBoxItem>22</ComboBoxItem>
-                    <ComboBoxItem>23</ComboBoxItem>
-                    <ComboBoxItem>24</ComboBoxItem>
-                    <ComboBoxItem>25</ComboBoxItem>
-                    <ComboBoxItem>26</ComboBoxItem>
-                    <ComboBoxItem>27</ComboBoxItem>
-                    <ComboBoxItem>28</ComboBoxItem>
-                    <ComboBoxItem>29</ComboBoxItem>
-                    <ComboBoxItem>30</ComboBoxItem>
-                    <ComboBoxItem>31</ComboBoxItem>
+                    <Label Content="Data rozpoczecia" Margin="10,44,302,221"/>
+
+                    <ComboBox Margin="361,77,10,187">
+                        <ComboBoxItem>1</ComboBoxItem>
+                        <ComboBoxItem>2</ComboBoxItem>
+                        <ComboBoxItem>3</ComboBoxItem>
+                        <ComboBoxItem>4</ComboBoxItem>
+                        <ComboBoxItem>5</ComboBoxItem>
+                        <ComboBoxItem>6</ComboBoxItem>
+                        <ComboBoxItem>7</ComboBoxItem>
+                        <ComboBoxItem>8</ComboBoxItem>
+                        <ComboBoxItem>9</ComboBoxItem>
+                        <ComboBoxItem>10</ComboBoxItem>
+                        <ComboBoxItem>11</ComboBoxItem>
+                        <ComboBoxItem>12</ComboBoxItem>
+                        <ComboBoxItem>13</ComboBoxItem>
+                        <ComboBoxItem>14</ComboBoxItem>
+                        <ComboBoxItem>15</ComboBoxItem>
+                        <ComboBoxItem>16</ComboBoxItem>
+                        <ComboBoxItem>17</ComboBoxItem>
+                        <ComboBoxItem>18</ComboBoxItem>
+                        <ComboBoxItem>19</ComboBoxItem>
+                        <ComboBoxItem>20</ComboBoxItem>
+                        <ComboBoxItem>21</ComboBoxItem>
+                        <ComboBoxItem>22</ComboBoxItem>
+                        <ComboBoxItem>23</ComboBoxItem>
+                        <ComboBoxItem>24</ComboBoxItem>
+                        <ComboBoxItem>25</ComboBoxItem>
+                        <ComboBoxItem>26</ComboBoxItem>
+                        <ComboBoxItem>27</ComboBoxItem>
+                        <ComboBoxItem>28</ComboBoxItem>
+                        <ComboBoxItem>29</ComboBoxItem>
+                        <ComboBoxItem>30</ComboBoxItem>
+                        <ComboBoxItem>31</ComboBoxItem>
                     </ComboBox>
-                    <Label Content="Czas trwania" Margin="10,56,302,212"/>
+                    <Label Content="Czas trwania" Margin="10,80,302,184"/>
+                    <ComboBox Margin="361,112,10,152">
+                        <ComboBoxItem>0</ComboBoxItem>
+                        <ComboBoxItem>10</ComboBoxItem>
+                        <ComboBoxItem>20</ComboBoxItem>
+                        <ComboBoxItem>30</ComboBoxItem>
+                        <ComboBoxItem>40</ComboBoxItem>
+                        <ComboBoxItem>50</ComboBoxItem>
+                        <ComboBoxItem>60</ComboBoxItem>
+                        <ComboBoxItem>70</ComboBoxItem>
+                        <ComboBoxItem>80</ComboBoxItem>
+                        <ComboBoxItem>90</ComboBoxItem>
+                        <ComboBoxItem>100</ComboBoxItem>
+                    </ComboBox>
+
+                    <Label Content="Płatność [%]" Width="100"  Margin="10,115,319,149"/>
+
+
+                    <Label Content="Typ Zwolnienia" Margin="10,150,319,115"/>
+                    <RadioButton Content="Lekarskie" HorizontalAlignment="Left" Margin="352,150,0,0" VerticalAlignment="Top" Height="16"/>
+                    <RadioButton Content="Urlop" HorizontalAlignment="Left" Margin="352,171,0,0" VerticalAlignment="Top" Height="17"/>
+
+
+
+
                 </Grid>
             </TabItem>
             <TabItem Header="Rozliczenie" Name="Rozliczenie">
-                <Grid Background="#FFE5E5E5" />
+                <Grid>
+                    <Label Content="Pesel" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="68"/>
+                    <Label Content="Data" HorizontalAlignment="Left" Margin="10,43,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Godziny przepracowane" HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Premia" HorizontalAlignment="Left" Margin="10,103,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Dochód Brutto" HorizontalAlignment="Left" Margin="10,134,0,0" VerticalAlignment="Top"/>
+
+
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="299,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+
+                    <ComboBox Name ="Rmm" Margin="317,38,73,233" IsReadOnly="True" IsEditable="True" Text="mm">
+                        <ComboBoxItem>1</ComboBoxItem>
+                        <ComboBoxItem>2</ComboBoxItem>
+                        <ComboBoxItem>3</ComboBoxItem>
+                        <ComboBoxItem>4</ComboBoxItem>
+                        <ComboBoxItem>5</ComboBoxItem>
+                        <ComboBoxItem>6</ComboBoxItem>
+                        <ComboBoxItem>7</ComboBoxItem>
+                        <ComboBoxItem>8</ComboBoxItem>
+                        <ComboBoxItem>9</ComboBoxItem>
+                        <ComboBoxItem>10</ComboBoxItem>
+                        <ComboBoxItem>11</ComboBoxItem>
+                        <ComboBoxItem>12</ComboBoxItem>
+                    </ComboBox>
+                    <ComboBox Name ="Rrrrr" Margin="361,38,10,233" IsReadOnly="True" IsEditable="True" Text="rrrr" >
+                        <ComboBoxItem>2009</ComboBoxItem>
+                        <ComboBoxItem>2010</ComboBoxItem>
+                        <ComboBoxItem>2011</ComboBoxItem>
+                        <ComboBoxItem>2012</ComboBoxItem>
+                        <ComboBoxItem>2013</ComboBoxItem>
+                        <ComboBoxItem>2014</ComboBoxItem>
+                        <ComboBoxItem>2015</ComboBoxItem>
+                        <ComboBoxItem>2016</ComboBoxItem>
+                        <ComboBoxItem>2017</ComboBoxItem>
+                        <ComboBoxItem>2018</ComboBoxItem>
+                    </ComboBox>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="361,72,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="58"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="347,103,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="72"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="347,134,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="72"/>
+
+
+                </Grid>
             </TabItem>
+
 
 
 

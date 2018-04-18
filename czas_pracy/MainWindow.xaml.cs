@@ -32,7 +32,7 @@ namespace czas_pracy
         }
         private void Edytuj_Click(object sender, RoutedEventArgs e)
         {
-            Window p = new Dodaj();
+            Window p = new Edytuj();
             p.Show();
         }
         private void Wyswietl_Click(object sender, RoutedEventArgs e)

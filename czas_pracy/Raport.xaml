@@ -8,13 +8,13 @@
         Style="{StaticResource MyWindow}"
         Title="Raporty" Height="300" Width="300">
     <Grid>
-        <Button Content="Button"  Margin="208,73,11,153"  Width="75" Style="{StaticResource MyButton}"/>
-        <Button Content="Button"  Margin="208,123,11,103"  Width="75" Style="{StaticResource MyButton}"/>
-        <Button Content="Button"  Margin="208,23,11,203"  Width="75" Style="{StaticResource MyButton}"/>
+        <Button Content="Pracownicy"  Margin="186,23,11,203" Style="{StaticResource MyButton}"/>
+        <Button Content="Rozliczenia"  Margin="186,73,11,153" Style="{StaticResource MyButton}"/>
+        <Button Content="Faktura"  Margin="186,123,11,103" Style="{StaticResource MyButton}"/>
         <RichTextBox HorizontalAlignment="Left" Height="236" Margin="10,23,0,0" VerticalAlignment="Top" Width="163">
             <FlowDocument>
                 <Paragraph>
-                    <Run Text="RichTextBox"/>
+                    <Run Text=""/>
                 </Paragraph>
             </FlowDocument>
         </RichTextBox>

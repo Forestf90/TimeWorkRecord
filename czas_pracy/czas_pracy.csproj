@@ -69,9 +69,16 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Edytuj.xaml.cs">
+      <DependentUpon>Edytuj.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Raport.xaml.cs">
       <DependentUpon>Raport.xaml</DependentUpon>
     </Compile>
+    <Page Include="Edytuj.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Style.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
