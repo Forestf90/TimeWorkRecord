@@ -84,3 +84,5 @@ G:\czas_pracy\czas_pracy\obj\Debug\czas_pracy.csproj.GenerateResource.Cache
 G:\czas_pracy\czas_pracy\obj\Debug\czas_pracy.csproj.CoreCompileInputs.cache
 G:\czas_pracy\czas_pracy\obj\Debug\czas_pracy.exe
 G:\czas_pracy\czas_pracy\obj\Debug\czas_pracy.pdb
+C:\Users\Forestf\Desktop\czas_pracy\czas_pracy\obj\Debug\Edytuj.g.cs
+C:\Users\Forestf\Desktop\czas_pracy\czas_pracy\obj\Debug\Edytuj.baml

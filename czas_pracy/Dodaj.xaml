@@ -14,14 +14,14 @@
     <Grid>
         <Button Content="Anuluj" HorizontalAlignment="Left" Margin="48,360,0,0" VerticalAlignment="Top" Width="75" Click="Anuluj_Click" Style="{StaticResource MyButton}"/>
         <Button Content="Dodaj" HorizontalAlignment="Left" Margin="337,360,0,0" VerticalAlignment="Top" Width="75" Click="Dodaj_Click" Style="{StaticResource MyButton}"/>
-        <TabControl HorizontalAlignment="Left" Height="322" Margin="10,10,0,0" VerticalAlignment="Top" Width="435"  >
-            <TabItem Name="Pracownik" Header="Pracownik" >
+        <TabControl Name="tab" HorizontalAlignment="Left" Height="322" Margin="10,10,0,0" VerticalAlignment="Top" Width="435"  >
+            <TabItem  Header="Pracownik" >
                 <Grid>
-                    <TextBox Margin="271,10,10,255"  />
+                    <TextBox Name="PImie" Margin="271,10,10,255"  />
                     <Label Content="Imie" Margin="10,10,361,255"/>
-                    <TextBox Margin="271,44,10,223"  />
+                    <TextBox Name="PNazwisko" Margin="271,44,10,223"  />
                     <Label Content="Nazwisko" Margin="10,44,347,223"/>
-                    <TextBox Margin="271,79,10,184"  />
+                    <TextBox Name="PPesel" Margin="271,79,10,184"  />
                     <Label Content="Pesel" Margin="10,81,364,184"/>
                     <ComboBox Name ="Pzdd" Margin="271,117,119,151" IsReadOnly="True" IsEditable="True" Text="dd">
                         <ComboBoxItem>1</ComboBoxItem>
@@ -84,18 +84,22 @@
                     </ComboBox>
                     <Label Content="Data zatrudnienia" Margin="10,115,309,151"/>
 
-                    <RadioButton Content="O Prace" HorizontalAlignment="Left" Margin="334,156,0,0" VerticalAlignment="Top" Height="16"/>
-                    <RadioButton Content="Zlecenie" HorizontalAlignment="Left" Margin="334,178,0,0" VerticalAlignment="Top" Height="17"/>
+                    <RadioButton Name="Prace" Content="O Prace" HorizontalAlignment="Left" Margin="334,156,0,0" VerticalAlignment="Top" Height="16"/>
+                    <RadioButton Name="Zlecenie" Content="Zlecenie" HorizontalAlignment="Left" Margin="334,178,0,0" VerticalAlignment="Top" Height="17"/>
                     <Label Content="Typ umowy" Margin="10,149,337,116"/>
-                    <TextBox HorizontalAlignment="Left" Height="25" Margin="299,214,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                    <TextBox Name="PWynagrodzenie" HorizontalAlignment="Left" Height="25" Margin="299,214,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
                     <Label Content="Wynagrodzenie" Margin="10,214,309,51"/>
+                    
+                    <Label Content="Czas pracy" HorizontalAlignment="Left" Margin="10,248,0,0" VerticalAlignment="Top" Width="82"/>
+                    <TextBox Name="PCzasPracy" HorizontalAlignment="Left" Height="23" Margin="299,248,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+
 
 
                 </Grid>
             </TabItem>
             <TabItem Header="Zwolnienie" Name="Zwolnienie">
                 <Grid>
-                    <TextBox Name="Pesel" Margin="282,18,10,253"  />
+                    <TextBox Name="ZPesel" Margin="282,18,10,253"  />
                     <Label Content="Pesel" Margin="10,10,302,255"/>
                     <ComboBox Name ="Zdd" Margin="273,46,117,222" IsReadOnly="True" IsEditable="True" Text="dd">
                         <ComboBoxItem>1</ComboBoxItem>
@@ -159,7 +163,7 @@
 
                     <Label Content="Data rozpoczecia" Margin="10,44,302,221"/>
 
-                    <ComboBox Margin="361,77,10,187">
+                    <ComboBox Name="CzasTrwania" Margin="361,77,10,187">
                         <ComboBoxItem>1</ComboBoxItem>
                         <ComboBoxItem>2</ComboBoxItem>
                         <ComboBoxItem>3</ComboBoxItem>
@@ -193,7 +197,7 @@
                         <ComboBoxItem>31</ComboBoxItem>
                     </ComboBox>
                     <Label Content="Czas trwania" Margin="10,80,302,184"/>
-                    <ComboBox Margin="361,112,10,152">
+                    <ComboBox Name="Platnosc"  Margin="361,112,10,152">
                         <ComboBoxItem>0</ComboBoxItem>
                         <ComboBoxItem>10</ComboBoxItem>
                         <ComboBoxItem>20</ComboBoxItem>
@@ -211,8 +215,8 @@
 
 
                     <Label Content="Typ Zwolnienia" Margin="10,150,319,115"/>
-                    <RadioButton Content="Lekarskie" HorizontalAlignment="Left" Margin="352,150,0,0" VerticalAlignment="Top" Height="16"/>
-                    <RadioButton Content="Urlop" HorizontalAlignment="Left" Margin="352,171,0,0" VerticalAlignment="Top" Height="17"/>
+                    <RadioButton Name="Lekarskie" Content="Lekarskie" HorizontalAlignment="Left" Margin="352,150,0,0" VerticalAlignment="Top" Height="16"/>
+                    <RadioButton Name="Urlop" Content="Urlop" HorizontalAlignment="Left" Margin="352,171,0,0" VerticalAlignment="Top" Height="17"/>
 
 
 
@@ -225,12 +229,11 @@
                     <Label Content="Data" HorizontalAlignment="Left" Margin="10,43,0,0" VerticalAlignment="Top"/>
                     <Label Content="Godziny przepracowane" HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top"/>
                     <Label Content="Premia" HorizontalAlignment="Left" Margin="10,103,0,0" VerticalAlignment="Top"/>
-                    <Label Content="Dochód Brutto" HorizontalAlignment="Left" Margin="10,134,0,0" VerticalAlignment="Top"/>
 
 
-                    <TextBox HorizontalAlignment="Left" Height="23" Margin="299,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                    <TextBox Name="RPesel" HorizontalAlignment="Left" Height="23" Margin="299,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
 
-                    <ComboBox Name ="Rmm" Margin="317,38,73,233" IsReadOnly="True" IsEditable="True" Text="mm">
+                    <ComboBox Name ="Rmm" Margin="308,38,73,233" IsReadOnly="True" IsEditable="True" Text="mm">
                         <ComboBoxItem>1</ComboBoxItem>
                         <ComboBoxItem>2</ComboBoxItem>
                         <ComboBoxItem>3</ComboBoxItem>
@@ -256,9 +259,8 @@
                         <ComboBoxItem>2017</ComboBoxItem>
                         <ComboBoxItem>2018</ComboBoxItem>
                     </ComboBox>
-                    <TextBox HorizontalAlignment="Left" Height="23" Margin="361,72,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="58"/>
-                    <TextBox HorizontalAlignment="Left" Height="23" Margin="347,103,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="72"/>
-                    <TextBox HorizontalAlignment="Left" Height="23" Margin="347,134,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="72"/>
+                    <TextBox Name="RGodzinyPrzepracowane" HorizontalAlignment="Left" Height="23" Margin="361,72,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="58"/>
+                    <TextBox Name="RPremia" HorizontalAlignment="Left" Height="23" Margin="347,103,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="72"/>
 
 
                 </Grid>
