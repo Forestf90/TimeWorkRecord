@@ -6,18 +6,19 @@
         xmlns:local="clr-namespace:czas_pracy"
         mc:Ignorable="d"
         Style="{StaticResource MyWindow}"
-        Title="Raporty" Height="300" Width="300">
+        Title="Raporty" Height="310" Width="645">
     <Grid>
-        <Button Content="Pracownicy"  Margin="186,23,11,203" Style="{StaticResource MyButton}"/>
-        <Button Content="Rozliczenia"  Margin="186,73,11,153" Style="{StaticResource MyButton}"/>
-        <Button Content="Faktura"  Margin="186,123,11,103" Style="{StaticResource MyButton}"/>
-        <RichTextBox HorizontalAlignment="Left" Height="236" Margin="10,23,0,0" VerticalAlignment="Top" Width="163">
-            <FlowDocument>
-                <Paragraph>
-                    <Run Text=""/>
-                </Paragraph>
-            </FlowDocument>
-        </RichTextBox>
+
+        <Grid Margin="0,10,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="6*"/>
+            </Grid.RowDefinitions>
+            <Button Grid.Row="0" Content="Pracownicy"   Style="{StaticResource MyButton}" Margin="10,12,530,12" Click="Button_Click"/>
+            <Button Grid.Row="0" Content="Rozliczenia"  Margin="267,12,270,11" Style="{StaticResource MyButton}"/>
+            <Button Grid.Row="0" Content="Faktura"  Margin="549,12,10,12" Style="{StaticResource MyButton}"/>
+            <DataGrid x:Name="dataGridView" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10,10,10,15" IsReadOnly="True" />
+        </Grid>
 
     </Grid>
 </Window>
