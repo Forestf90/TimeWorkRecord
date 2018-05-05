@@ -50,13 +50,22 @@ namespace czas_pracy
                     string typ_umowy;
                     if (Prace.IsChecked == true) typ_umowy = "o prace";
                     else typ_umowy = "zlecenie";
-                    int wynagrodzenie =Convert.ToInt32(PWynagrodzenie.Text);
-                    int czaspracy = Convert.ToInt32(PCzasPracy.Text);
-                 
-                    string aa = @"INSERT INTO Pracownik VALUES("+"'"+pesel+"' ,'"+ imie+ "','" + nazwisko + "', '"
-                        + miesiac +"."+dzien+"."+rok+ "' ,"+"NULL,"+ "'" + wynagrodzenie + "',"+ "'" +typ_umowy + "" +
-                        "','" + czaspracy + "')";
+                    decimal wynagrodzenieDec =Convert.ToDecimal(PWynagrodzenie.Text);
+                    //int czaspracy;
+                    //czaspracy= Convert.ToInt32(PCzasPracy.Text);
 
+                    string wynagrodzenie = Convert.ToString(wynagrodzenieDec);
+                    wynagrodzenie = wynagrodzenie.Replace(",", ".");
+
+                    string aa;
+                 
+
+                    if(Zlecenie.IsChecked== true) aa= @"INSERT INTO Pracownik VALUES(" + "'" + pesel + "' ,'" + imie + "','" + nazwisko + "', '"
+                        + miesiac + "." + dzien + "." + rok + "' ," + "NULL," + "'" + wynagrodzenie + "'," + "'" + typ_umowy + "" +
+                        "',NULL)";
+                    else aa = @"INSERT INTO Pracownik VALUES(" + "'" + pesel + "' ,'" + imie + "','" + nazwisko + "', '"
+                        + miesiac + "." + dzien + "." + rok + "' ," + "NULL," + "'" + wynagrodzenie + "'," + "'" + typ_umowy + "" +
+                        "','" + Convert.ToInt32(PCzasPracy.Text) + "')";
 
                     SqlCommand cmd = new SqlCommand(aa, con);
                     cmd.ExecuteNonQuery();
@@ -154,7 +163,7 @@ namespace czas_pracy
                                Rresult = reader.GetInt32(0);
                                TypUmowy = reader.GetString(1);
                                ile_na_godzine = reader.GetDecimal(2);
-                              ile_h_na_dzien = reader.GetInt32(3);
+                              if(TypUmowy== "o prace   ") ile_h_na_dzien = reader.GetInt32(3);
                             }
                         reader.Close();
                         }
@@ -206,8 +215,9 @@ namespace czas_pracy
                             reader.Close();
                             }
 
-                            if (dlugoscUrlopu == 0) MessageBox.Show("jest null");
-                            else
+                            //if (dlugoscUrlopu == 0) //MessageBox.Show("jest null");
+                           // else
+                           if(dlugoscUrlopu !=0)
                             {
                                 
                                 DateTime Urlop_koniec = new DateTime();
@@ -216,7 +226,7 @@ namespace czas_pracy
                                 ile_dni_urlopu = GetBusinessDays(Urlop_start, Urlop_koniec);
                                 
                                 PlatnoscZaUrlop = (int)ile_dni_urlopu * platnoscUrlopu *ile_na_godzine * ile_h_na_dzien; // Co ???
-                                MessageBox.Show(Convert.ToString(PlatnoscZaUrlop));
+                               // MessageBox.Show(Convert.ToString(PlatnoscZaUrlop));
                             }
 
                         double dni_przepracowane = ile_dni_roboczych - ile_dni_urlopu;
@@ -231,8 +241,12 @@ namespace czas_pracy
                         brutto_kropka = brutto_kropka.Replace(",", ".");
 
 
-                        string insercikR = @"INSERT INTO Rozliczenie VALUES(" + "'" + Rresult + "' ,'" +id_zwolnienia + "' ,'"
+                        string insercikR;
+                       if(id_zwolnienia==0) insercikR= @"INSERT INTO Rozliczenie VALUES(" + "'" + Rresult + "' , NULL ,'"
                        + Rmiesiac + ".01." + Rrok + "' ," + "'" + godziny_przepracowane + "'," + "'" + premia_z_kropka + "'," + "'" + brutto_kropka + "')";
+
+                        else insercikR = @"INSERT INTO Rozliczenie VALUES(" + "'" + Rresult + "' ,'" + id_zwolnienia + "' ,'"
+                      + Rmiesiac + ".01." + Rrok + "' ," + "'" + godziny_przepracowane + "'," + "'" + premia_z_kropka + "'," + "'" + brutto_kropka + "')";
 
 
                         SqlCommand DR = new SqlCommand(insercikR, con);
@@ -243,18 +257,18 @@ namespace czas_pracy
                             RPesel.Text = ""; Rmm.Text = ""; Rrrrr.Text=""; RGodzinyPrzepracowane.Text = ""; RPremia.Text = "";
 
                     }
-                    }
+            }
                     catch
-                    {
-                        MessageBox.Show("Nie znaleziono pracownika z takim peselem");
-                    }
+            {
+                MessageBox.Show("Nie znaleziono pracownika z takim peselem");
+            }
 
 
 
 
 
 
-                    break;
+            break;
 
 
             }

@@ -15,7 +15,7 @@
         <Button Content="Anuluj" HorizontalAlignment="Left" Margin="48,360,0,0" VerticalAlignment="Top" Width="75" Click="Anuluj_Click" Style="{StaticResource MyButton}"/>
         <Button Content="Dodaj" HorizontalAlignment="Left" Margin="337,360,0,0" VerticalAlignment="Top" Width="75" Click="Dodaj_Click" Style="{StaticResource MyButton}"/>
         <TabControl Name="tab" HorizontalAlignment="Left" Height="322" Margin="10,10,0,0" VerticalAlignment="Top" Width="435"  >
-            <TabItem  Header="Pracownik" >
+            <TabItem  Header="Pracownik" Height="22" VerticalAlignment="Top" >
                 <Grid>
                     <TextBox Name="PImie" Margin="271,10,10,255"  />
                     <Label Content="Imie" Margin="10,10,361,255"/>
@@ -87,7 +87,7 @@
                     <RadioButton Name="Prace" Content="O Prace" HorizontalAlignment="Left" Margin="334,156,0,0" VerticalAlignment="Top" Height="16"/>
                     <RadioButton Name="Zlecenie" Content="Zlecenie" HorizontalAlignment="Left" Margin="334,178,0,0" VerticalAlignment="Top" Height="17"/>
                     <Label Content="Typ umowy" Margin="10,149,337,116"/>
-                    <TextBox Name="PWynagrodzenie" HorizontalAlignment="Left" Height="25" Margin="299,214,0,0" TextWrapping="Wrap" Text="" IsEnabled="{Binding ElementName=Prace, Path=IsChecked}" VerticalAlignment="Top" Width="120"/>
+                    <TextBox Name="PWynagrodzenie" HorizontalAlignment="Left" Height="25" Margin="299,214,0,0" TextWrapping="Wrap" Text=""  VerticalAlignment="Top" Width="120"/>
                     <Label Content="Wynagrodzenie" Margin="10,214,309,51"/>
                     
                     <Label Content="Czas pracy" HorizontalAlignment="Left" Margin="10,248,0,0" VerticalAlignment="Top" Width="82"/>

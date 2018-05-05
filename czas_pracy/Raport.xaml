@@ -15,9 +15,9 @@
                 <RowDefinition Height="6*"/>
             </Grid.RowDefinitions>
             <Button Grid.Row="0" Content="Pracownicy"   Style="{StaticResource MyButton}" Margin="10,12,530,12" Click="Button_Click"/>
-            <Button Grid.Row="0" Content="Rozliczenia"  Margin="267,12,270,11" Style="{StaticResource MyButton}"/>
-            <Button Grid.Row="0" Content="Faktura"  Margin="549,12,10,12" Style="{StaticResource MyButton}"/>
-            <DataGrid x:Name="dataGridView" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10,10,10,15" IsReadOnly="True" />
+            <Button Grid.Row="0" Content="Rozliczenia" Name="RapRozliczenie" IsEnabled="False" Margin="267,12,270,11" Style="{StaticResource MyButton}" Click="RapRozliczenie_Click"/>
+            <Button Grid.Row="0" Content="Zapisz"  Name="RapZapisz" IsEnabled="False" Margin="549,12,10,12" Style="{StaticResource MyButton}" Click="RapZapisz_Click"/>
+            <DataGrid x:Name="dataGridView" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10,10,10,15" IsReadOnly="True" AutoGeneratingColumn="dataGridView_AutoGeneratingColumn" SelectionChanged="dataGridView_SelectionChanged"  />
         </Grid>
 
     </Grid>

@@ -8,94 +8,33 @@
         Style="{StaticResource MyWindow}"
         Title="Edytuj" Height="450" Width="800">
     <Grid>
-        <TextBox  HorizontalAlignment="Left" Margin="45,41,0,0" TextWrapping="Wrap" Text="Ime i nazwisko" VerticalAlignment="Top" Height="27" Width="156"/>
+        <TextBox  Name="EImie" HorizontalAlignment="Left" Margin="45,41,0,0" TextWrapping="Wrap" Text="Ime i nazwisko" VerticalAlignment="Top" Height="27" Width="156"/>
         <Label Content="Podaj imie i nazwisko" Foreground="White" HorizontalAlignment="Left" Margin="45,10,0,0" VerticalAlignment="Top" Width="156"/>
-        <RichTextBox HorizontalAlignment="Left" Height="318" Margin="45,73,0,0" VerticalAlignment="Top" Width="156">
-            <FlowDocument>
-                <Paragraph>
-                    <Run Text=""/>
-                </Paragraph>
-            </FlowDocument>
-        </RichTextBox>
 
-        <Grid Name="con" Visibility="Collapsed"  Background="AntiqueWhite" Margin="293,73,45,81">
 
-            <TextBox HorizontalAlignment="Left" Height="23" Margin="322,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-            <Label Content="Nazwisko" Margin="10,10,370,212"/>
+        <Grid Name="ukryty" Visibility="Collapsed"  Background="White" Margin="305,41,33,81">
 
-            <ComboBox Name ="Pzwdd" Margin="248,60,150,166" IsReadOnly="True" IsEditable="True" Text="dd" RenderTransformOrigin="0.773,0.571">
-                <ComboBoxItem>1</ComboBoxItem>
-                <ComboBoxItem>2</ComboBoxItem>
-                <ComboBoxItem>3</ComboBoxItem>
-                <ComboBoxItem>4</ComboBoxItem>
-                <ComboBoxItem>5</ComboBoxItem>
-                <ComboBoxItem>6</ComboBoxItem>
-                <ComboBoxItem>7</ComboBoxItem>
-                <ComboBoxItem>8</ComboBoxItem>
-                <ComboBoxItem>9</ComboBoxItem>
-                <ComboBoxItem>10</ComboBoxItem>
-                <ComboBoxItem>11</ComboBoxItem>
-                <ComboBoxItem>12</ComboBoxItem>
-                <ComboBoxItem>13</ComboBoxItem>
-                <ComboBoxItem>14</ComboBoxItem>
-                <ComboBoxItem>15</ComboBoxItem>
-                <ComboBoxItem>16</ComboBoxItem>
-                <ComboBoxItem>17</ComboBoxItem>
-                <ComboBoxItem>18</ComboBoxItem>
-                <ComboBoxItem>19</ComboBoxItem>
-                <ComboBoxItem>20</ComboBoxItem>
-                <ComboBoxItem>21</ComboBoxItem>
-                <ComboBoxItem>22</ComboBoxItem>
-                <ComboBoxItem>23</ComboBoxItem>
-                <ComboBoxItem>24</ComboBoxItem>
-                <ComboBoxItem>25</ComboBoxItem>
-                <ComboBoxItem>26</ComboBoxItem>
-                <ComboBoxItem>27</ComboBoxItem>
-                <ComboBoxItem>28</ComboBoxItem>
-                <ComboBoxItem>29</ComboBoxItem>
-                <ComboBoxItem>30</ComboBoxItem>
-                <ComboBoxItem>31</ComboBoxItem>
-            </ComboBox>
-            <ComboBox Name ="Pzwmm" Margin="311,60,87,166" IsReadOnly="True" IsEditable="True" Text="mm" RenderTransformOrigin="0.394,-0.321">
-                <ComboBoxItem>1</ComboBoxItem>
-                <ComboBoxItem>2</ComboBoxItem>
-                <ComboBoxItem>3</ComboBoxItem>
-                <ComboBoxItem>4</ComboBoxItem>
-                <ComboBoxItem>5</ComboBoxItem>
-                <ComboBoxItem>6</ComboBoxItem>
-                <ComboBoxItem>7</ComboBoxItem>
-                <ComboBoxItem>8</ComboBoxItem>
-                <ComboBoxItem>9</ComboBoxItem>
-                <ComboBoxItem>10</ComboBoxItem>
-                <ComboBoxItem>11</ComboBoxItem>
-                <ComboBoxItem>12</ComboBoxItem>
-            </ComboBox>
-            <ComboBox Name ="Pzwrrrr" Margin="374,60,10,166" IsReadOnly="True" IsEditable="True" Text="rrrr" >
-                <ComboBoxItem>2009</ComboBoxItem>
-                <ComboBoxItem>2010</ComboBoxItem>
-                <ComboBoxItem>2011</ComboBoxItem>
-                <ComboBoxItem>2012</ComboBoxItem>
-                <ComboBoxItem>2013</ComboBoxItem>
-                <ComboBoxItem>2014</ComboBoxItem>
-                <ComboBoxItem>2015</ComboBoxItem>
-                <ComboBoxItem>2016</ComboBoxItem>
-                <ComboBoxItem>2017</ComboBoxItem>
-                <ComboBoxItem>2018</ComboBoxItem>
-            </ComboBox>
-            <Label Content="Data zwolnienia" Margin="10,60,309,166"/>
+            <TextBox Name="ENazwisko" HorizontalAlignment="Left" Height="23" Margin="311,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+            <Label Content="Nazwisko" Margin="10,10,372,231"/>
 
-            <RadioButton Content="O Prace" HorizontalAlignment="Left" Margin="334,121,0,0" VerticalAlignment="Top"/>
-            <RadioButton Content="Zlecenie" HorizontalAlignment="Left" Margin="334,141,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.556,2.667"/>
-            <Label Content="Typ umowy" Margin="10,106,337,111"/>
-            <TextBox HorizontalAlignment="Left" Height="24" Margin="322,175,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-            <Label Content="Wynagrodzenie" Margin="10,175,309,46"/>
-       
-           
+            <RadioButton Name="Eo_prace" Content="O Prace" HorizontalAlignment="Left" Margin="329,79,0,0" VerticalAlignment="Top"/>
+            <RadioButton Name="Ezlecenie" Content="Zlecenie" HorizontalAlignment="Left" Margin="326,99,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.556,2.667"/>
+            <Label Content="Typ umowy" Margin="10,73,349,172"/>
+            <TextBox Name="Ewynagrodzenie" HorizontalAlignment="Left" Height="24" Margin="311,157,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+            <Label Content="Wynagrodzenie" Margin="10,157,309,79"/>
+            <Label Content="Czas Pracy" HorizontalAlignment="Left" Margin="10,233,0,0" VerticalAlignment="Top" Width="137" Height="46"/>
+            <TextBox Name="Eczas_pracy" HorizontalAlignment="Left" Height="23" Margin="311,233,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsEnabled="{Binding ElementName=Eo_prace, Path=IsChecked}"/>
+
+
 
 
         </Grid>
 
 
         <Button Content="Szukaj" HorizontalAlignment="Left" Margin="206,41,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click" Height="27" Style="{StaticResource MyButton}"/>
+        <DataGrid Name="Imiona" HorizontalAlignment="Left" Height="248" Margin="45,92,0,0" VerticalAlignment="Top" Width="236"  AutoGeneratingColumn="Imiona_AutoGeneratingColumn" SelectionChanged="Imiona_SelectionChanged" ColumnWidth="*" CanUserAddRows="False"/>
+        <Button Name="EEdytuj" IsEnabled="False" Content="Edytuj" HorizontalAlignment="Left" Margin="45,345,0,0" VerticalAlignment="Top" Width="236" Style="{StaticResource MyButton}"  Height="36" Click="EEdytuj_Click"/>
+        <Button  Name="EZapisz" Visibility="Collapsed"  Content="Zapisz" HorizontalAlignment="Left" Margin="305,345,0,0"  Style="{StaticResource MyButton}" VerticalAlignment="Top" Width="220" Height="36" Click="EZapisz_Click"/>
+        <Button Name="EZwolnij" Visibility="Collapsed" Content="Zwolnij" HorizontalAlignment="Left" Margin="530,345,0,0" VerticalAlignment="Top" Width="231" Style="{StaticResource MyButton}" Height="36" Click="EZwolnij_Click"/>
     </Grid>
 </Window>

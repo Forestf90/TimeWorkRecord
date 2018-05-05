@@ -88,3 +88,9 @@ C:\Users\Forestf\Desktop\czas_pracy\czas_pracy\obj\Debug\Edytuj.g.cs
 C:\Users\Forestf\Desktop\czas_pracy\czas_pracy\obj\Debug\Edytuj.baml
 C:\Users\Forestf\Desktop\czas_pracy\czas_pracy\bin\Debug\Dapper.dll
 C:\Users\Forestf\Desktop\czas_pracy\czas_pracy\bin\Debug\Dapper.xml
+C:\Users\Forestf\Desktop\czas_pracy\czas_pracy\bin\Debug\PdfSharp.Charting.dll
+C:\Users\Forestf\Desktop\czas_pracy\czas_pracy\bin\Debug\PdfSharp.dll
+C:\Users\Forestf\Desktop\czas_pracy\czas_pracy\bin\Debug\PdfSharp.xml
+C:\Users\Forestf\Desktop\czas_pracy\czas_pracy\bin\Debug\PdfSharp.Charting.xml
+C:\Users\Forestf\Desktop\czas_pracy\czas_pracy\bin\Debug\de\PdfSharp.resources.dll
+C:\Users\Forestf\Desktop\czas_pracy\czas_pracy\bin\Debug\de\PdfSharp.Charting.resources.dll
