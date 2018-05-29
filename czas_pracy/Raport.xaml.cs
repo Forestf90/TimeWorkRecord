@@ -113,6 +113,38 @@ namespace czas_pracy
                 PdfDocument document = new PdfDocument();
                 document.Info.Title = pracownikdoraportu.Nazwisko +" "+Convert.ToString(do_wydruku.Miesiac);
 
+            decimal spoleczne;
+            decimal koszt_uzyskania;
+            decimal dochod_do;
+            decimal podatek=0;
+            int podatek_doc;
+            decimal zdrowotne;
+            decimal do_wyplaty;
+
+            if(pracownikdoraportu.TypUmowy == "o prace   ")
+            {
+                spoleczne = brutto * 0.3m;
+                koszt_uzyskania = (brutto- spoleczne) / 20;
+                dochod_do = brutto - koszt_uzyskania - spoleczne;
+                podatek = dochod_do * 0.055m;
+                zdrowotne = dochod_do * 0.09m;
+
+
+            }
+            else
+            {
+                spoleczne = 0.001m;
+                koszt_uzyskania = brutto /20;
+                dochod_do = brutto - koszt_uzyskania;
+                podatek = dochod_do * 0.055m;
+                zdrowotne = 0;
+                
+            }
+
+
+            podatek_doc = Convert.ToInt32(podatek);
+            do_wyplaty = brutto - zdrowotne - -podatek;
+
             PdfPage page = document.AddPage();
             XGraphics gfx = XGraphics.FromPdfPage(page);
             
@@ -123,16 +155,16 @@ namespace czas_pracy
                          "zawartej z ................................... NajlepszaFirmaxD Sp. z.o.o" + Environment.NewLine+
                          "adres........................................... Randomowa 24, 43-382 Bielsko-Biala" + Environment.NewLine+
                          Environment.NewLine + Environment.NewLine+ Environment.NewLine+
-                         "Wynagrodzenie BRUTTO       " +brutto+"zl"+ Environment.NewLine+
-                         "Ubezpieczenia spoleczne    " + Environment.NewLine+
-                         "Koszt uzyskania przychodu  " + Environment.NewLine+
-                         "Procent kosztow uzyskania  " + Environment.NewLine+
-                         "Dochod do opodatkowania    " + Environment.NewLine+
-                         "Podatek naliczony          " + Environment.NewLine+
-                         "Podatek dochodowy          " + Environment.NewLine+
-                         "Ubezpieczenia zdrowotne    " + Environment.NewLine+
+                         "Wynagrodzenie BRUTTO         " +brutto.ToString("#.##") + "zl"+ Environment.NewLine+
+                         "Ubezpieczenia spoleczne       " +spoleczne.ToString("#.##")+"zl" + Environment.NewLine+
+                         "Koszt uzyskania przychodu  " +koszt_uzyskania.ToString("#.##") +"zl"+ Environment.NewLine+
+                         "Procent kosztow uzyskania  " +"20%"+ Environment.NewLine+
+                         "Dochod do opodatkowania     " + dochod_do.ToString("#.##") + "zl"+ Environment.NewLine+
+                         "Podatek naliczony                 " +podatek.ToString("#.##") + "zl"+ Environment.NewLine+
+                         "Podatek dochodowy               " +podatek_doc.ToString("#.##") +"zl"+ Environment.NewLine+
+                         "Ubezpieczenia zdrowotne      " + do_wyplaty.ToString("#.##") +"zl"+ Environment.NewLine+
                          Environment.NewLine+ Environment.NewLine +
-                         "Kwota do wyplaty           " + Environment.NewLine+
+                         "Kwota do wyplaty            "+do_wyplaty.ToString("#.##")+"zl" + Environment.NewLine+
                          Environment.NewLine + Environment.NewLine +
                        //  "Data otrzymania rachunku :" + do_wydruku.Miesiac.ToString("yyyy-MM-dd") + 
                        "Podpis     .........................";
@@ -173,5 +205,7 @@ namespace czas_pracy
             document.Save(filename);
 
         }
+
+
     }
 }

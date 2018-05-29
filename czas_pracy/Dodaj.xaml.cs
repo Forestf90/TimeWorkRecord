@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Data.SqlClient;
+using System.Text.RegularExpressions;
 
 namespace czas_pracy
 {
@@ -286,6 +287,18 @@ namespace czas_pracy
             if (startD.DayOfWeek == DayOfWeek.Sunday) calcBusinessDays--;
 
             return calcBusinessDays;
+        }
+
+        private void NumberValidationTextBox(object sender, TextCompositionEventArgs e)
+        {
+            Regex regex = new Regex("[^0-9]+");
+            e.Handled = regex.IsMatch(e.Text);
+        }
+
+        private void HajsValidationTextBox(object sender, TextCompositionEventArgs e)
+        {
+            Regex regex = new Regex(@"[^0-9/,]+");
+            e.Handled = regex.IsMatch(e.Text);
         }
 
         private void Anuluj_Click(object sender, RoutedEventArgs e)

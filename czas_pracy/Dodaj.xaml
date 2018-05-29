@@ -21,7 +21,7 @@
                     <Label Content="Imie" Margin="10,10,361,255"/>
                     <TextBox Name="PNazwisko" Margin="271,44,10,223"  />
                     <Label Content="Nazwisko" Margin="10,44,347,223"/>
-                    <TextBox Name="PPesel" Margin="271,79,10,184"  />
+                    <TextBox Name="PPesel" Margin="271,79,10,184"  PreviewTextInput="NumberValidationTextBox"/>
                     <Label Content="Pesel" Margin="10,81,364,184"/>
                     <ComboBox Name ="Pzdd" Margin="271,117,119,151" IsReadOnly="True" IsEditable="True" Text="dd">
                         <ComboBoxItem>1</ComboBoxItem>
@@ -87,11 +87,11 @@
                     <RadioButton Name="Prace" Content="O Prace" HorizontalAlignment="Left" Margin="334,156,0,0" VerticalAlignment="Top" Height="16"/>
                     <RadioButton Name="Zlecenie" Content="Zlecenie" HorizontalAlignment="Left" Margin="334,178,0,0" VerticalAlignment="Top" Height="17"/>
                     <Label Content="Typ umowy" Margin="10,149,337,116"/>
-                    <TextBox Name="PWynagrodzenie" HorizontalAlignment="Left" Height="25" Margin="299,214,0,0" TextWrapping="Wrap" Text=""  VerticalAlignment="Top" Width="120"/>
+                    <TextBox Name="PWynagrodzenie" HorizontalAlignment="Left" Height="25" Margin="299,214,0,0" TextWrapping="Wrap" Text=""  VerticalAlignment="Top" Width="120" PreviewTextInput="HajsValidationTextBox"/>
                     <Label Content="Wynagrodzenie" Margin="10,214,309,51"/>
                     
                     <Label Content="Czas pracy" HorizontalAlignment="Left" Margin="10,248,0,0" VerticalAlignment="Top" Width="82"/>
-                    <TextBox Name="PCzasPracy" HorizontalAlignment="Left" Height="23" Margin="299,248,0,0" TextWrapping="Wrap" Text="" IsEnabled="{Binding ElementName=Prace, Path=IsChecked}" VerticalAlignment="Top" Width="120"/>
+                    <TextBox Name="PCzasPracy" HorizontalAlignment="Left" Height="23" Margin="299,248,0,0" TextWrapping="Wrap" Text="" IsEnabled="{Binding ElementName=Prace, Path=IsChecked}" VerticalAlignment="Top" Width="120" PreviewTextInput="NumberValidationTextBox"/>
 
 
 
@@ -99,7 +99,7 @@
             </TabItem>
             <TabItem Header="Zwolnienie" Name="Zwolnienie">
                 <Grid>
-                    <TextBox Name="ZPesel" Margin="282,18,10,253"  />
+                    <TextBox Name="ZPesel" Margin="282,18,10,253" PreviewTextInput="NumberValidationTextBox" />
                     <Label Content="Pesel" Margin="10,10,302,255"/>
                     <ComboBox Name ="Zdd" Margin="273,46,117,222" IsReadOnly="True" IsEditable="True" Text="dd">
                         <ComboBoxItem>1</ComboBoxItem>
@@ -231,7 +231,7 @@
                     <Label Content="Premia" HorizontalAlignment="Left" Margin="10,103,0,0" VerticalAlignment="Top"/>
 
 
-                    <TextBox Name="RPesel" HorizontalAlignment="Left" Height="23" Margin="299,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                    <TextBox Name="RPesel" HorizontalAlignment="Left" Height="23" Margin="299,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" PreviewTextInput="NumberValidationTextBox"/>
 
                     <ComboBox Name ="Rmm" Margin="308,38,73,233" IsReadOnly="True" IsEditable="True" Text="mm">
                         <ComboBoxItem>01</ComboBoxItem>
@@ -259,8 +259,8 @@
                         <ComboBoxItem>2017</ComboBoxItem>
                         <ComboBoxItem>2018</ComboBoxItem>
                     </ComboBox>
-                    <TextBox Name="RGodzinyPrzepracowane" HorizontalAlignment="Left" Height="23" Margin="361,72,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="58"/>
-                    <TextBox Name="RPremia" HorizontalAlignment="Left" Height="23" Margin="347,103,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="72"/>
+                    <TextBox Name="RGodzinyPrzepracowane" HorizontalAlignment="Left" Height="23" Margin="361,72,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="58" PreviewTextInput="NumberValidationTextBox"/>
+                    <TextBox Name="RPremia" HorizontalAlignment="Left" Height="23" Margin="347,103,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="72" PreviewTextInput="HajsValidationTextBox"/>
 
 
                 </Grid>
